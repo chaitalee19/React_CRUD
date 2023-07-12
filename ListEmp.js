@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
+import Employeeedit from './Employeeedit';
 export function ListEmp(props) {
     const [employees, setEmployee] = useState([]);
     useEffect(() => {
@@ -11,6 +12,7 @@ export function ListEmp(props) {
     return (
         <div>
             <h2>Employees Data...</h2>
+            <h3> <a href={'/empcreate/'}>create new employee</a></h3>
             <table> <thead>
                 <tr>
                     <th>Id</th>

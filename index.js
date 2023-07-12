@@ -9,7 +9,10 @@ import { ListEmp } from './ListEmp';
 import { Nopage } from './Nopage';
 import {Outlet,Link } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import Employee from './Employee';
+import Enployeedel, { Employeedel } from './Employeedel';
+import Employeeedit from './Employeeedit';
+import Employeecreate from './Employeecreate';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,10 +23,14 @@ root.render(
           <Route path="Home" element={<Home />} />
           <Route path="Contactus" element={<Contact />} />
           <Route path="ListEmployee" element={<ListEmp />} />
-       {/*   <Route path="emp/:id" element={<Employee />} />*/}
+       <Route path="emp/:id" element={<Employee />} />
+       <Route path="empedit/:id" element={<Employeeedit/>} />
+       <Route path="empdel/:id" element={<Employeedel/>} />
+       <Route path="empcreate" element={<Employeecreate/>} />
           <Route path="*" element={<Nopage />} />
         </Route>
       </Routes>
+    
     </BrowserRouter>
     
   </React.StrictMode>
@@ -33,3 +40,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
